@@ -6,7 +6,7 @@
 /*   By: jgranet <jgranet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 10:07:55 by jgranet           #+#    #+#             */
-/*   Updated: 2014/06/26 17:17:31 by jgranet          ###   ########.fr       */
+/*   Updated: 2014/06/26 17:23:13 by yoreal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ int				ft_expulse(t_client *cl);
 void			ft_connect_nbr(t_client *c);
 void			ft_broadcast(t_client *c, char *msg);
 void			ft_fork(t_client *c);
+void			ft_check_resources(t_client *cl);
+void			ft_put_on_till(t_client *cl);
 
 
 #endif
