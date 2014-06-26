@@ -6,7 +6,7 @@
 /*   By: jgranet <jgranet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 10:07:55 by jgranet           #+#    #+#             */
-/*   Updated: 2014/06/26 14:40:24 by jgranet          ###   ########.fr       */
+/*   Updated: 2014/06/26 14:47:55 by yoreal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void			ft_client(t_client *c);
 
 void			ft_voir(t_client *cl);
 void			ft_inventaire(t_client *cl);
+void			ft_incantation(t_client *cl);
 int				ft_avance(t_client *cl);
 int				ft_droite(t_client *cl);
 int				ft_gauche(t_client *cl);
