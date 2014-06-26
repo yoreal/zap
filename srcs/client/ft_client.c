@@ -6,7 +6,7 @@
 /*   By: jgranet <jgranet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 10:53:26 by jgranet           #+#    #+#             */
-/*   Updated: 2014/06/26 17:42:46 by jgranet          ###   ########.fr       */
+/*   Updated: 2014/06/26 18:16:08 by jgranet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,8 @@ void			ft_client(t_client *c)
 //		ft_fork(c);
 	while (42)
 	{
-		ft_putendl("debut");
+		ft_prend(c, "nourriture");
 		ft_check_resources(c);
-		ft_putendl("fin");
 		ret = ft_move(c);
 		if (ret == 1)
 			ft_avance(c);

@@ -6,7 +6,7 @@
 /*   By: yoreal <yoreal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 15:09:56 by yoreal            #+#    #+#             */
-/*   Updated: 2014/06/26 18:07:40 by jgranet          ###   ########.fr       */
+/*   Updated: 2014/06/26 18:24:47 by jgranet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,13 +61,10 @@ static int	ft_check_till(t_client *cl, int *q)
 void		ft_check_resources(t_client *cl)
 {
 	static int	q[6] = {0};
-	int			i;
 
-	i = -1;
 	ft_memset(q, 0, 6);
 	ft_voir(cl);
-	while (cl->split[++i])
-		ft_get_resources(cl->split[i], q);
+	ft_get_resources(cl->split[0], q);
 	if (ft_check_till(cl, q) == 1)
 		ft_incantation(cl);
 	else

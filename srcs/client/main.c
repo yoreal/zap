@@ -6,7 +6,7 @@
 /*   By: jgranet <jgranet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 09:50:50 by jgranet           #+#    #+#             */
-/*   Updated: 2014/06/26 16:11:51 by jgranet          ###   ########.fr       */
+/*   Updated: 2014/06/26 18:27:48 by jgranet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,11 +76,6 @@ int			main(int argc, char **argv)
 	split = ft_strsplit(line, ' ');
 	c.x = ft_atoi(split[0]);
 	c.y = ft_atoi(split[1]);
-	ft_putstr("x = ");
-	ft_putnbr(c.x);
-	ft_putstr(" y = ");
-	ft_putnbr(c.y);
-	ft_putchar('\n');
 	ft_strdel2(&split);
 	ft_strdel(&line);
 	ft_client(&c);
