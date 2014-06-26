@@ -6,7 +6,7 @@
 /*   By: jgranet <jgranet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 10:07:55 by jgranet           #+#    #+#             */
-/*   Updated: 2014/06/26 11:30:09 by yoreal           ###   ########.fr       */
+/*   Updated: 2014/06/26 14:40:24 by jgranet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct	s_client
 	char		*host;
 	char		*team;
 	char		**split;
+	char		*path;
 	t_stock		stock;
 }				t_client;
 
@@ -49,7 +50,10 @@ int				ft_droite(t_client *cl);
 int				ft_gauche(t_client *cl);
 int				ft_prend(t_client *cl, char *stuff);
 int				ft_pose(t_client *cl, char *stuff);
-
+int				ft_expulse(t_client *cl);
+void			ft_connect_nbr(t_client *c);
+void			ft_broadcast(t_client *c, char *msg);
+void			ft_fork(t_client *c);
 
 
 #endif
