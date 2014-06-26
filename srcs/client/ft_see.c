@@ -6,11 +6,12 @@
 /*   By: yoreal <yoreal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 10:27:44 by yoreal            #+#    #+#             */
-/*   Updated: 2014/06/26 11:10:01 by yoreal           ###   ########.fr       */
+/*   Updated: 2014/06/26 11:22:22 by yoreal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "client.h"
 
 void		ft_voir(t_client *cl)
 {

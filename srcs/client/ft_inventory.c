@@ -6,11 +6,12 @@
 /*   By: yoreal <yoreal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 10:43:54 by yoreal            #+#    #+#             */
-/*   Updated: 2014/06/26 11:10:21 by yoreal           ###   ########.fr       */
+/*   Updated: 2014/06/26 11:20:50 by yoreal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "client.h"
 
 static int		ft_get_quantity(char *ressource)
 {
