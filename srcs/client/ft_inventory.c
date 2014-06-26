@@ -6,7 +6,7 @@
 /*   By: yoreal <yoreal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 10:43:54 by yoreal            #+#    #+#             */
-/*   Updated: 2014/06/26 11:35:48 by jgranet          ###   ########.fr       */
+/*   Updated: 2014/06/26 13:36:57 by jgranet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ static int		ft_get_quantity(char *ressource)
 
 static void		ft_save_inv(t_client *cl, char **split)
 {
-	cl->stock.nourriture = ft_get_quantity(split[0]);
-	cl->stock.linemate = ft_get_quantity(split[1]);
-	cl->stock.deraumere = ft_get_quantity(split[2]);
-	cl->stock.sibur = ft_get_quantity(split[3]);
-	cl->stock.mendiane = ft_get_quantity(split[4]);
-	cl->stock.phiras = ft_get_quantity(split[5]);
-	cl->stock.thystame = ft_get_quantity(split[6]);
+	cl->stock.linemate = ft_get_quantity(split[0]);
+	cl->stock.deraumere = ft_get_quantity(split[1]);
+	cl->stock.sibur = ft_get_quantity(split[2]);
+	cl->stock.mendiane = ft_get_quantity(split[3]);
+	cl->stock.phiras = ft_get_quantity(split[4]);
+	cl->stock.thystame = ft_get_quantity(split[5]);
+	cl->stock.nourriture = ft_get_quantity(split[6]);
 }
 
 void			ft_inventaire(t_client *cl)
@@ -47,7 +47,7 @@ void			ft_inventaire(t_client *cl)
     get_next_line(cl->cs, &line);
 	if (ft_strcmp(line, "mort") == 0)
 		ft_quit(cl);
-	split = ft_strsplit(line, ',');
+	split = ft_strsplit(ft_strtrim(line), ',');
 	ft_save_inv(cl, split);
 	free(line);
 	ft_strdel2(&split);

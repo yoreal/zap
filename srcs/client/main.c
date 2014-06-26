@@ -6,7 +6,7 @@
 /*   By: jgranet <jgranet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 09:50:50 by jgranet           #+#    #+#             */
-/*   Updated: 2014/06/26 11:36:36 by jgranet          ###   ########.fr       */
+/*   Updated: 2014/06/26 13:13:37 by jgranet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void		ft_init_cli(t_client *c)
 	c->stock.mendiane = 0;
 	c->stock.phiras = 0;
 	c->stock.thystame = 0;
-	c->split = NULL;
+	c->split = NULL;//ft_strsplit("yo", ' ');
 }
 
 int			main(int argc, char **argv)
@@ -61,14 +61,19 @@ int			main(int argc, char **argv)
 	signal(SIGINT, exit);
 	if (argc == 1)
 		ft_usage();
+	ft_init_cli(&c);
 	ft_check_args(argv, &c);
 	ft_create_serveur(&c);
 	get_next_line(c.cs, &line);
+	ft_putendl(line);
 	ft_strdel(&line);
+	ft_putendl_fd(c.team, c.cs);
 	get_next_line(c.cs, &line);
 	c.nb_co = ft_atoi(line);
+	ft_putendl(line);
 	ft_strdel(&line);
 	get_next_line(c.cs, &line);
+	ft_putendl(line);
 	ft_strdel(&line);
 	ft_client(&c);
 	return (0);

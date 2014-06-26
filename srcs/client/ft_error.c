@@ -6,7 +6,7 @@
 /*   By: jgranet <jgranet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 09:58:36 by jgranet           #+#    #+#             */
-/*   Updated: 2014/06/26 11:35:08 by jgranet          ###   ########.fr       */
+/*   Updated: 2014/06/26 13:07:11 by jgranet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void			ft_quit(t_client *c)
 {
 	ft_strdel(&c->host);
 	ft_strdel(&c->team);
-	if (c->split)
+	if (c->split != NULL)
 		ft_strdel2(&c->split);
 	close(c->cs);
 	exit(0);
