@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_connect_nbr.c                                   :+:      :+:    :+:   */
+/*   ft_egg.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgranet <jgranet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/06/26 14:07:28 by jgranet           #+#    #+#             */
-/*   Updated: 2014/06/26 19:53:16 by jgranet          ###   ########.fr       */
+/*   Created: 2014/06/26 19:43:16 by jgranet           #+#    #+#             */
+/*   Updated: 2014/06/26 20:02:21 by jgranet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,22 @@
 #include "client.h"
 #include "libft.h"
 
-void		ft_connect_nbr(t_client *c)
+int		ft_egg(t_client *c, int i)
 {
-	char	*line;
+	char		*line;
 
-	line = NULL;
-	ft_putendl_fd("connect_nbr", c->cs);
-	get_next_line(c->cs, &line);
-	if (ft_strcmp(line, "mort") == 0)
-		ft_quit(c);
-	c->nb_co = ft_atoi(line);
-	free(line);
+	if (i > (int)rand() % 100 + 50)
+	{
+		line = NULL;
+		ft_putendl_fd("fork", c->cs);
+		get_next_line(c->cs, &line);
+		if (ft_strcmp(line, "mort") == 0)
+		{
+			free(line);
+			ft_quit(c);
+		}
+		free(line);
+		i = 0;
+	}
+	return (i);
 }

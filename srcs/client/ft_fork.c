@@ -6,14 +6,12 @@
 /*   By: jgranet <jgranet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 14:16:43 by jgranet           #+#    #+#             */
-/*   Updated: 2014/06/26 19:30:43 by jgranet          ###   ########.fr       */
+/*   Updated: 2014/06/26 20:09:48 by jgranet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
-#include <errno.h>
-#include <stdio.h>
 #include "client.h"
 #include "libft.h"
 
@@ -39,28 +37,11 @@ void		ft_fork(t_client *c)
 	pid_t	son;
 	extern char	**environ;
 
-	ft_putstr("fork\n");
 	if ((arg = (char**)malloc(sizeof(char*) * 8)) == NULL)
 		ft_quit(c);
 	ft_memset(arg, 0, sizeof(arg));
 	ft_get_arg(&arg, c);
-
-	int		i = 0;
-	while (arg[i])
-	{
-		ft_putendl(arg[i]);
-		i++;
-	}
-
-
 	son = fork();
-	ft_putendl(c->path);
 	if (son == 0)
-	{
-		ft_putendl("execve");
-		execve("./bin/client", arg, environ);
-		perror("ERROR EXECVE");
-		ft_putendl("execve fail");
-	}
-//	ft_strdel2(&arg);
+		execve(c->path, arg, environ);
 }
