@@ -6,7 +6,7 @@
 /*   By: jgranet <jgranet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 10:53:26 by jgranet           #+#    #+#             */
-/*   Updated: 2014/06/26 18:16:08 by jgranet          ###   ########.fr       */
+/*   Updated: 2014/06/26 19:40:03 by jgranet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,15 @@ int				ft_move(t_client *c)
 void			ft_client(t_client *c)
 {
 	int		ret;
+	int		i;
 
-//	if (c->nb_co > 0)
-//		ft_fork(c);
+	i = 0;
+	if (c->nb_co > 0)
+		ft_fork(c);
 	while (42)
 	{
+		if (i == 100)
+			ft_fork(c);
 		ft_prend(c, "nourriture");
 		ft_check_resources(c);
 		ret = ft_move(c);
@@ -47,5 +51,6 @@ void			ft_client(t_client *c)
 			ft_droite(c);
 		else if (ret == 3)
 			ft_gauche(c);
+		i++;
 	}
 }
