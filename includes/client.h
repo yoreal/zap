@@ -6,7 +6,7 @@
 /*   By: jgranet <jgranet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 10:07:55 by jgranet           #+#    #+#             */
-/*   Updated: 2014/06/26 10:26:38 by yoreal           ###   ########.fr       */
+/*   Updated: 2014/06/26 10:36:48 by yoreal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct	s_client
 	int			nb_co;
 	char		*host;
 	char		*team;
+	char		**split;
 	t_stock		stock;
 }				t_client;
 
