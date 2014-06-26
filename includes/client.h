@@ -6,7 +6,7 @@
 /*   By: jgranet <jgranet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 10:07:55 by jgranet           #+#    #+#             */
-/*   Updated: 2014/06/26 20:28:45 by jgranet          ###   ########.fr       */
+/*   Updated: 2014/06/26 20:48:59 by yoreal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ int				ft_move_3(t_client *c, int *tab);
 int				ft_move_4(int *tab);
 int				ft_move_5(t_client *c, int *tab);
 int				ft_move(t_client *c);
-
 
 void			ft_voir(t_client *cl);
 void			ft_inventaire(t_client *cl);
