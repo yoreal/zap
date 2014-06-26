@@ -6,11 +6,12 @@
 /*   By: jgranet <jgranet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 10:13:52 by jgranet           #+#    #+#             */
-/*   Updated: 2014/06/26 10:29:53 by jgranet          ###   ########.fr       */
+/*   Updated: 2014/06/26 10:47:49 by jgranet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "client.h"
+#include "libft.h"
 
 void			ft_fill_client(char **argv, int i, t_client *c)
 {

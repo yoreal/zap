@@ -6,7 +6,7 @@
 /*   By: jgranet <jgranet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 09:50:50 by jgranet           #+#    #+#             */
-/*   Updated: 2014/06/26 10:39:58 by jgranet          ###   ########.fr       */
+/*   Updated: 2014/06/26 10:49:09 by jgranet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <signal.h>
+#include <stdlib.h>
 #include "client.h"
 #include "libft.h"
 
@@ -34,7 +35,7 @@ void		ft_create_serveur(t_client *c)
 	sin.sin_family = AF_INET;
 	sin.sin_port = htons(c->port);
 	ft_memcpy(&(sin.sin_addr.s_addr), host->h_addr, host->h_length);
-	if (connect(c->sock, (const struct sockaddr*)&sin, sizeof(sin)))
+	if (connect(c->cs, (const struct sockaddr*)&sin, sizeof(sin)))
 		ft_error("ERROR connect");
 }
 
@@ -60,7 +61,7 @@ int			main(int argc, char **argv)
 
 	signal(SIGINT, exit);
 	if (argc == 1)
-		ft_usage(argv[0]);
+		ft_usage();
 	ft_check_args(argv, &c);
 	ft_create_serveur(&c);
 	return (0);
