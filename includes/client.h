@@ -6,7 +6,7 @@
 /*   By: jgranet <jgranet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 10:07:55 by jgranet           #+#    #+#             */
-/*   Updated: 2014/06/26 10:36:48 by yoreal           ###   ########.fr       */
+/*   Updated: 2014/06/26 10:42:40 by yoreal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ typedef struct	s_client
 void			ft_usage(void);
 void			ft_error(char *msg);
 
+void			ft_voir(t_client *cl);
 int				ft_avance(t_client cl);
 int				ft_droite(t_client cl);
 int				ft_gauche(t_client cl);
