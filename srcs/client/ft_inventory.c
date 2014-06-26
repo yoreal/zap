@@ -6,7 +6,7 @@
 /*   By: yoreal <yoreal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 10:43:54 by yoreal            #+#    #+#             */
-/*   Updated: 2014/06/26 11:32:02 by yoreal           ###   ########.fr       */
+/*   Updated: 2014/06/26 11:35:48 by jgranet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ static int		ft_get_quantity(char *ressource)
 
 static void		ft_save_inv(t_client *cl, char **split)
 {
-	cl->nourriture = ft_get_quantity(split[0]);
-	cl->linemate = ft_get_quantity(split[1]);
-	cl->deraumere = ft_get_quantity(split[2]);
-	cl->sibur = ft_get_quantity(split[3]);
-	cl->mendiane = ft_get_quantity(split[4]);
-	cl->phiras = ft_get_quantity(split[5]);
-	cl->thystame = ft_get_quantity(split[6]);
+	cl->stock.nourriture = ft_get_quantity(split[0]);
+	cl->stock.linemate = ft_get_quantity(split[1]);
+	cl->stock.deraumere = ft_get_quantity(split[2]);
+	cl->stock.sibur = ft_get_quantity(split[3]);
+	cl->stock.mendiane = ft_get_quantity(split[4]);
+	cl->stock.phiras = ft_get_quantity(split[5]);
+	cl->stock.thystame = ft_get_quantity(split[6]);
 }
 
 void			ft_inventaire(t_client *cl)
