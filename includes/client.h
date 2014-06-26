@@ -6,7 +6,7 @@
 /*   By: jgranet <jgranet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 10:07:55 by jgranet           #+#    #+#             */
-/*   Updated: 2014/06/26 17:40:02 by jgranet          ###   ########.fr       */
+/*   Updated: 2014/06/26 20:09:58 by yoreal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void			ft_broadcast(t_client *c, char *msg);
 void			ft_fork(t_client *c);
 void			ft_check_resources(t_client *cl);
 void			ft_put_on_till(t_client *cl);
+void			ft_take_stone(t_client *cl);
 
 
 #endif
