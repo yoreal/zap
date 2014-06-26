@@ -6,7 +6,7 @@
 /*   By: jgranet <jgranet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 10:07:55 by jgranet           #+#    #+#             */
-/*   Updated: 2014/06/26 14:40:24 by jgranet          ###   ########.fr       */
+/*   Updated: 2014/06/26 16:00:55 by jgranet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ typedef struct	s_client
 	int			lvl;
 	int			port;
 	int			nb_co;
+	int			x;
+	int			y;
 	char		*host;
 	char		*team;
 	char		**split;
