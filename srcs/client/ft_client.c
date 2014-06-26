@@ -6,7 +6,7 @@
 /*   By: jgranet <jgranet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 10:53:26 by jgranet           #+#    #+#             */
-/*   Updated: 2014/06/26 19:40:03 by jgranet          ###   ########.fr       */
+/*   Updated: 2014/06/26 20:09:26 by yoreal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ void			ft_client(t_client *c)
 			ft_fork(c);
 		ft_prend(c, "nourriture");
 		ft_check_resources(c);
+		ft_take_stone(c);
 		ret = ft_move(c);
 		if (ret == 1)
 			ft_avance(c);
