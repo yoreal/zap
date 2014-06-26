@@ -6,7 +6,7 @@
 /*   By: jgranet <jgranet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 09:50:50 by jgranet           #+#    #+#             */
-/*   Updated: 2014/06/26 18:27:48 by jgranet          ###   ########.fr       */
+/*   Updated: 2014/06/26 18:30:36 by jgranet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,9 @@ int			main(int argc, char **argv)
 	c.y = ft_atoi(split[1]);
 	ft_strdel2(&split);
 	ft_strdel(&line);
+	ft_putstr("nb_co");
+	ft_putnbr(c.nb_co);
+	ft_putchar('\n');
 	ft_client(&c);
 	return (0);
 }
