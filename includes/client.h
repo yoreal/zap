@@ -6,7 +6,7 @@
 /*   By: jgranet <jgranet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 10:07:55 by jgranet           #+#    #+#             */
-/*   Updated: 2014/06/26 11:18:00 by yoreal           ###   ########.fr       */
+/*   Updated: 2014/06/26 11:30:09 by yoreal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ void			ft_client(t_client *c);
 
 void			ft_voir(t_client *cl);
 void			ft_inventaire(t_client *cl);
-int				ft_avance(t_client cl);
-int				ft_droite(t_client cl);
-int				ft_gauche(t_client cl);
+int				ft_avance(t_client *cl);
+int				ft_droite(t_client *cl);
+int				ft_gauche(t_client *cl);
 int				ft_prend(t_client *cl, char *stuff);
 int				ft_pose(t_client *cl, char *stuff);
 
