@@ -6,7 +6,7 @@
 /*   By: yoreal <yoreal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 15:09:56 by yoreal            #+#    #+#             */
-/*   Updated: 2014/06/26 17:16:08 by yoreal           ###   ########.fr       */
+/*   Updated: 2014/06/26 18:07:40 by jgranet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,9 @@ static void	ft_get_resources(char *till, int *q)
 {
 	int		i;
 	char	**s;
-	char	*tmp;
 
 	i = -1;
-	tmp = ft_strsub(till, 1, ft_strlen(till) - 2);
-	s = ft_strsplit(tmp, ' ');
+	s = ft_strsplit(till, ' ');
 	while (s[++i])
 	{
 		if (ft_strcmp("linemate", s[i]) == 0)			
@@ -66,6 +64,7 @@ void		ft_check_resources(t_client *cl)
 	int			i;
 
 	i = -1;
+	ft_memset(q, 0, 6);
 	ft_voir(cl);
 	while (cl->split[++i])
 		ft_get_resources(cl->split[i], q);

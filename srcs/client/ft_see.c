@@ -6,7 +6,7 @@
 /*   By: yoreal <yoreal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 10:27:44 by yoreal            #+#    #+#             */
-/*   Updated: 2014/06/26 13:37:14 by jgranet          ###   ########.fr       */
+/*   Updated: 2014/06/26 17:51:12 by jgranet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 void		ft_voir(t_client *cl)
 {
 	char	*line;
+	char	*tmp;
 
 	line = NULL;
 	ft_putendl_fd("voir", cl->cs);
@@ -25,6 +26,8 @@ void		ft_voir(t_client *cl)
 		ft_quit(cl);
 	if (cl->split != NULL)
 		ft_strdel2(&cl->split);
-	cl->split = ft_strsplit(line, ',');
+	tmp = ft_strsub(line, 1, ft_strlen(line) - 2);
+	cl->split = ft_strsplit(tmp, ',');
 	free(line);
+	free(tmp);
 }

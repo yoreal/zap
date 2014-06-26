@@ -6,7 +6,7 @@
 /*   By: yoreal <yoreal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 14:04:42 by yoreal            #+#    #+#             */
-/*   Updated: 2014/06/26 14:52:14 by yoreal           ###   ########.fr       */
+/*   Updated: 2014/06/26 18:05:45 by jgranet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,16 +80,16 @@ void		ft_incantation(t_client *cl)
 		get_next_line(cl->cs, &line);
 		if (ft_strcmp(line, "elevation en cours") == 0)
 		{
-			while ((ft_strcmp(split[0], "niveau") != 0) 
-				   || (ft_strcmp(split[1], "actuel") != 0))
+			while (split == NULL || (ft_strcmp(split[0], "niveau") != 0)
+				  || (ft_strcmp(split[1], "actuel") != 0))
 			{
 				if (split != NULL)
 					ft_strdel2(&split);
 				get_next_line(cl->cs, &line2);
 				split = ft_strsplit(line2, ' ');	
 			}
-			cl->lvl = ft_atoi(split[2]);
 		}
+		cl->lvl = ft_atoi(split[2]);
 		ft_free_tool(&line, &line2, &split);
 	}
 }
