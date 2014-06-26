@@ -6,11 +6,12 @@
 /*   By: jgranet <jgranet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 09:58:36 by jgranet           #+#    #+#             */
-/*   Updated: 2014/06/26 10:02:50 by jgranet          ###   ########.fr       */
+/*   Updated: 2014/06/26 11:10:06 by jgranet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <unistd.h>
 #include "libft.h"
 
 void			ft_usage(void)
@@ -24,6 +25,16 @@ void			ft_usage(void)
 
 void			ft_error(char *msg)
 {
-	ft_putendl(msg)
+	ft_putendl(msg);
+	exit(0);
+}
+
+void			ft_quit(t_client *c)
+{
+	ft_strdel(&c->host);
+	ft_strdel(&c->team);
+	if (split)
+		ft_strdel2(&split);
+	close(c->cs);
 	exit(0);
 }

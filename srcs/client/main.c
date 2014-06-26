@@ -6,7 +6,7 @@
 /*   By: jgranet <jgranet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/06/26 09:50:50 by jgranet           #+#    #+#             */
-/*   Updated: 2014/06/26 10:49:09 by jgranet          ###   ########.fr       */
+/*   Updated: 2014/06/26 11:07:27 by jgranet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,13 @@ int			main(int argc, char **argv)
 		ft_usage();
 	ft_check_args(argv, &c);
 	ft_create_serveur(&c);
+	get_next_line(c->cs, &line);
+	ft_strdel(&line);
+	get_next_line(c->cs, &line);
+	c->nb_co = ft_atoi(line);
+	ft_strdel(&line);
+	get_next_line(c->cs, &line);
+	ft_strdel(&line);
+	ft_client(&c);
 	return (0);
 }
